@@ -84,6 +84,8 @@ What is each of these files?
 
 * Run ```rake db:migrate```
 
+* Add a link to the ```Thing``` index action to the nav menu, using helpers
+
 * Run RSpec
 
 __After__ you've made your changes, commit and push your branch up to your repo
@@ -98,12 +100,9 @@ What happens when you....?
 
 * Run ```rspec```
 * Run ```rails s```
+* Run ```rake routes```
 * View [http://localhost:3000/things](http://localhost:3000/things) while your server is running
 * Add some Things
 * Run ```rails c``` 
 	* Try ```Thing.all``` 	
-
-
-
-
 

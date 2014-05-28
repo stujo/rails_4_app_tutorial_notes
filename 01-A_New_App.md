@@ -1,31 +1,21 @@
 Level 01 - A New App
 -----------
 
-#Before we Start
+#Overview
 * We are making a new app called golp which will eventually run on Heroku
-
 * The core of our app will be Things which are stored in a postgres database
-
 * We will use rspec instead of test unit so we'll use the -T option to the ```rails new``` command
-
-* We don't need coffeescript so we'll comment that out in our Gemfile
-
-```
-    # gem 'coffee-rails'
-```
-
 * We'll add our default set of development gems including
 
+
 ```
-	group :development do
-		gem 'quiet_assets'
-		gem 'better_errors'
-	end
+group :development do
+	gem 'quiet_assets'
+	gem 'better_errors'
+end
 ```
 
-And maybe these too:
-
-Support for chrome rails plugin:
+Support for chrome rails panel plugin:
 
     group :development do
       gem 'meta_request' # https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg
@@ -40,23 +30,23 @@ For pry / debugging fans:
       gem 'pry-byebug'
     end
 
-* Add RSpec after reading this:
-[how-can-i-tell-rails-to-use-rspec-instead-of-test-unit-when-creating-a-new-rails](http://stackoverflow.com/questions/6728618/how-can-i-tell-rails-to-use-rspec-instead-of-test-unit-when-creating-a-new-rails)
+Install RSpec: read the attached stack overflow rspec article
 
-    gem 'rspec-rails'
 
-    $ bundle install
-    $ rails g rspec:install
+	group :development, :test do
+		gem 'rspec-rails'
+	end
 
 
 #Level Resources
 
-* https://github.com/evrone/quiet_assets
-* https://github.com/charliesome/better_errors
-* https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg
-* https://github.com/deivid-rodriguez/pry-byebug
+* [Stack Overflow: Use-rspec-instead-of-test-unit](http://stackoverflow.com/questions/6728618/how-can-i-tell-rails-to-use-rspec-instead-of-test-unit-when-creating-a-new-rails)
+* [quiet_assets](https://github.com/evrone/quiet_assets)
+* [better_errors](https://github.com/charliesome/better_errors)
+* [Rails Panel](https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg)
+* [pry-byebug](https://github.com/deivid-rodriguez/pry-byebug)
 
-#Let's Do It
+#Do it for Yourself
 
 * Branch name for this feature: 'getting_started'
 
@@ -65,10 +55,30 @@ This one is a little tricky for branch naming because our git repo won't exist u
 So after we run rails new, we cd to the app directory and run ```git init```. Then, before we add or commit any files,
 we run ```git checkout -b getting_started``` to create a switch to the new branch
 
+
++ Create your new app
++ Check that your have postgres and rspec included
++ Configure rspec with the ```.rspec``` file to display the documentation format so you can see all the tests that run (Research required)
+
 __After__ you've made your changes, commit and push your branch up to your repo
 
 ```
-	$ git push origin getting_started 
+	(getting_started)]$ git push --set-upstream origin getting_started
 ```
+
+#Testing your Progress
+
+What happens when you....?
+
+* Run ```bundle install``` 
+* Run ```rake db:create``` 
+* Run ```rspec```
+* Run ```rails s```
+* View [http://localhost:3000/](http://localhost:3000/) while your server is running
+* View [http://localhost:3000/page_that_does_not_exist](http://localhost:3000/page_that_does_not_exist) while your server is running
+* Run ```git status```
+* In Chrome Dev Tools open up the rails panel
+* Run ```ls test``` - The test directory is for unit tests, your app should only have a ```spec``` directory.
+
 
 

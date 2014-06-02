@@ -47,6 +47,7 @@ __After__ you've made your changes, commit and push your branch up to your repo
 
 What happens when you....?
 
+* Run ```rake routes```
 * Run ```rails s```
 * View [http://localhost:3000/things](http://localhost:3000/things) while your server is running
 * View and Edit some of the seeded Thing
@@ -64,6 +65,6 @@ What happens when you....?
 	* Timeoutable
 	* Validatable
 	* Lockable
-
+* What are the routes that were added and what do they do?
 
 

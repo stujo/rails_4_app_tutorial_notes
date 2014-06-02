@@ -77,8 +77,10 @@ What happens when you....?
 * View [http://localhost:3000/helloworld](http://localhost:3000/helloworld) while your server is running
 * Resize your browse window to make it the same size as a mobile phone screen
 
+#Update Your README.md
 
-
-
+* Explain what you accomplished in this lesson
+* What is bootstrap?
+* What is responsive design?
 
 

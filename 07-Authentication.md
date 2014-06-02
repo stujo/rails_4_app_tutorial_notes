@@ -36,6 +36,11 @@ Level 07 - Authentication With Devise
 	* Redirect to things index on login
 	* Redirect to root route on logout
 
+* Add login, logout and register links to your nav menu, using helpers
+
+* Ensure that the login and register links are only visible to unauthenticated users
+
+* Ensure that the logout link is only visible to authenticated users
 
 __After__ you've made your changes, commit and push your branch up to your repo
 

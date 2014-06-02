@@ -51,6 +51,7 @@ What happens when you....?
 * View and Edit some of the seeded Thing
 * DELETE ALL YOUR DATA! - Run ```rake db:reset```
 
+#Update Your README.md
 
-
-
+* Explain what you did
+* Explain what is the difference between .find_or_create_by and find_or_initialize_by

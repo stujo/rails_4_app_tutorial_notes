@@ -49,7 +49,7 @@ Additional functionality may be spec'd and developed by team members!
 
 ---
 
-#User Stories
+#Some Sample User Stories
 
 ---
 
@@ -72,9 +72,12 @@ __branch_name__: ```basic_keyword_search```
 3. Map the user's search term to the ```name``` parameter on locu
 
 ## Resources
+
 * [https://dev.locu.com/](https://dev.locu.com/)
 * [http://robots.thoughtbot.com/activemodel-form-objects](http://robots.thoughtbot.com/activemodel-form-objects)
 * [https://github.com/typhoeus/typhoeus](https://github.com/typhoeus/typhoeus)
+
+
 ---
 
 
@@ -103,6 +106,7 @@ __branch_name__: ```authentication```
 2. Copy the devise views into the app before customizing them
 
 ## Resources
+
 * [http://devise.plataformatec.com.br/](http://devise.plataformatec.com.br/)
 
 

@@ -11,12 +11,15 @@ Level 07 - Authentication With Devise
 * Restrict All things routes to logged in users
 * Redirect to the things index page on login
 * Redirect to the root page on logout
+* HARD BIT: Fixing Tests to Work with Authentication
 * Bonus: Update Devise views to match bootstrap
 
 #Level Resources
 
 * [https://github.com/plataformatec/devise#getting-started](https://github.com/plataformatec/devise#getting-started)
 * [http://guides.rubyonrails.org/routing.html](http://guides.rubyonrails.org/routing.html)
+* [http://blog.sorryapp.com/2013/03/22/request-and-controller-specs-with-devise.html](http://blog.sorryapp.com/2013/03/22/request-and-controller-specs-with-devise.html)
+
 
 #Do it for Yourself
 
@@ -35,6 +38,19 @@ Level 07 - Authentication With Devise
 * Investigate how to set the redirects on login and logout and implement: 
 	* Redirect to things index on login
 	* Redirect to root route on logout
+	
+* Run ```rspec``` Uh-oh :)
+	* Now we fix our controller tests for ```ThingsController``` in this case we need to update the tests, not what we would normally do, but pay attention and there is much to be learned relating to how to write test for your authentication
+	* This is tricky and this is my attempt:
+	[https://github.com/stujo/rails_4_app_tutorial/commit/0e6f0db3ef0eef3194a0d60f26378bfa75ebe7dc#diff-5fa8dda64b8bab4096bf3ef4b9385c1f](https://github.com/stujo/rails_4_app_tutorial/commit/0e6f0db3ef0eef3194a0d60f26378bfa75ebe7dc#diff-5fa8dda64b8bab4096bf3ef4b9385c1f)
+	* Basically I wrapped all the current tests in a context that signs in a fake user (Created Via FactoryGirl) using the devise test helpers
+		* removed let(:valid_session) { {} } and references to valid_session in ```spec/controllers/things_controller_spec.rb```
+	    * Reviewed or create our FactoryGirl factory for users:
+```spec/factories/users.rb``` based on errors I got without updating these
+		* It would be a good idea to test that our authentication is working correctly
+	* Also deleted ```spec/requests/things_spec.rb``` since it duplicates our controller test and 
+		
+
 
 
 __After__ you've made your changes, commit and push your branch up to your repo
@@ -47,6 +63,7 @@ __After__ you've made your changes, commit and push your branch up to your repo
 
 What happens when you....?
 
+* Run ```rspec```
 * Run ```rails s```
 * View [http://localhost:3000/things](http://localhost:3000/things) while your server is running
 * View and Edit some of the seeded Thing
@@ -64,6 +81,7 @@ What happens when you....?
 	* Timeoutable
 	* Validatable
 	* Lockable
+* What did you have to do to update your rspec tests after adding authentication for the ```things```	
 
 
 

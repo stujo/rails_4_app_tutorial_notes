@@ -52,6 +52,11 @@ Level 07 - Authentication With Devise
 		
 
 
+* Add login, logout and register links to your nav menu, using helpers
+
+* Ensure that the login and register links are only visible to unauthenticated users
+
+* Ensure that the logout link is only visible to authenticated users
 
 __After__ you've made your changes, commit and push your branch up to your repo
 
@@ -64,6 +69,7 @@ __After__ you've made your changes, commit and push your branch up to your repo
 What happens when you....?
 
 * Run ```rspec```
+* Run ```rake routes```
 * Run ```rails s```
 * View [http://localhost:3000/things](http://localhost:3000/things) while your server is running
 * View and Edit some of the seeded Thing
@@ -82,6 +88,6 @@ What happens when you....?
 	* Validatable
 	* Lockable
 * What did you have to do to update your rspec tests after adding authentication for the ```things```	
-
+* What are the routes that were added and what do they do?
 
 

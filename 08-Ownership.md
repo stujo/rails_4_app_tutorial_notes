@@ -1,10 +1,10 @@
-Level 08 - Users and Things
+Level 08 - Associations!
 -----------
 
 #Overview
 * Make ```Thing``` belong to ```User```
 * ```User``` has_many ```Thing```s
-* Update Seed File to include Users
+* Update Seed File to reflect new model associations
 
 #Level Resources
 
@@ -14,7 +14,9 @@ Level 08 - Users and Things
 
 * Branch name for this feature: 'ownership'
 
-* Run ```git checkout -b ownership``` to create a switch to the new branch
+* Run ```git checkout -b ownership``` to create and switch to the new branch
+
+
 
 
 __After__ you've made your changes, commit and push your branch up to your repo
@@ -26,6 +28,10 @@ __After__ you've made your changes, commit and push your branch up to your repo
 #Testing your Progress
 
 What happens when you....?
+
+* Try to make a new Thing in your console?
+* Try to make a new Thing in your browser?
+* 
 
 * Run ```rspec```
 * Run ```rake db:migrate```
@@ -39,7 +45,14 @@ What happens when you....?
 #Update Your README.md
 
 * Explain what you did
-* What is the relationships between has_many and belongs_to
+* What is the relationship between has_many and belongs_to?
+* What actually happens when we add associations between models?
+	* What does it do behind the scenes?  
+	* How does it allow us to shorten our controller methods?  Think about what your code would look like if you couldn't use model associations.
+* How do Rails migrations work?  
+* Do you need to name a migration anything specific?  Are ther
+* What's the difference between `user:references` and `user_id:integer`
+* How do you undo a migration?
 
 
 

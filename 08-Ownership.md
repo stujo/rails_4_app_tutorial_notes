@@ -8,6 +8,9 @@ Level 08 - Associations!
 
 #Level Resources
 
+* [Active Record Associations Rails Guide](http://guides.rubyonrails.org/association_basics.html)
+* [Migrations Rails Guide](http://guides.rubyonrails.org/migrations.html)
+
 
 
 #Do it for Yourself

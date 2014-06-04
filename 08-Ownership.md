@@ -16,7 +16,19 @@ Level 08 - Associations!
 
 * Run ```git checkout -b ownership``` to create and switch to the new branch
 
+Create a new migration to add a `User` reference to our `Thing` model
 
+Run `rake db:migrate`
+
+Add the proper model associations between User and Thing.  has_many? has_one?  belongs_to?
+
+Now that we have our models assocated, let's add a validation to the Thing model.  Make sure a Thing is created with a user_id.
+
+Reset the database and re-seed the database.
+
+Oh no! Our seed file doesn't work anymore.  What's wrong? Figure out a way to fix it.  Hint: you need to add a User!
+
+Open your rails Console and make sure that you have at least one User in your database.  Check to make sure that User has multiple Things associated with it.
 
 
 __After__ you've made your changes, commit and push your branch up to your repo
@@ -46,9 +58,11 @@ What happens when you....?
 
 * Explain what you did
 * What is the relationship between has_many and belongs_to?
+* What is a foreign key?
 * What actually happens when we add associations between models?
 	* What does it do behind the scenes?  
 	* How does it allow us to shorten our controller methods?  Think about what your code would look like if you couldn't use model associations.
+* There are 6 model associations.  What are they? Explain each one and give an example of when you might use each one.
 * How do Rails migrations work?  
 * Do you need to name a migration anything specific?  Are ther
 * What's the difference between `user:references` and `user_id:integer`
